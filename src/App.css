@@ -7,12 +7,13 @@
   z-index: 9;
 }
 
+.logo {
+  height: 50px;
+  border-radius: 50px;
+}
+
 .bgColor {
-  /* background: rgb(255, 209, 0);
-  background: linear-gradient(90deg, rgba(255, 209, 0, 1) 8%, rgba(170, 70, 169, 1) 61%, rgba(119, 0, 255, 1) 86%); */
-
-  background-color: #ffffff;
-
+  background-color: #FFFFFF;
 }
 
 a {
@@ -20,11 +21,9 @@ a {
 }
 
 .btn {
-  /* background: linear-gradient(90deg, rgba(255, 209, 0, 1) 8%, rgba(170, 70, 169, 1) 61%, rgba(119, 0, 255, 1) 86%); */
   background-color: rgb(255, 255, 255);
   border: 2px solid black;
   color: white;
-  /* font-weight: bold; */
   color: black;
 }
 
@@ -35,8 +34,25 @@ body {
   background-attachment: fixed;
   background-size: cover;
   color: aliceblue;
+
 }
 
 .bgDiv {
   background-color: #2626269b;
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+}
+
+.img {
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  border-radius: 8px;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: none;
+  /* cursor: pointer; */
 }

@@ -13,8 +13,8 @@ const Navigation = () => {
     <Navbar className='bgColor' expand="lg" >
       <Container fluid>
         <Link to='/'>
-          <Navbar.Brand as="div"> <img src='../../logo.png' height={'60'} width={'60'} alt=
-            'Cura Reserve' /></Navbar.Brand>
+          <Navbar.Brand as="div"> <img src='../../logo.png' className='logo' alt=
+            'logo' /></Navbar.Brand>
         </Link>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
@@ -32,7 +32,6 @@ const Navigation = () => {
               <Nav.Link as="div">Linkedin</Nav.Link>
             </Link>
           </Nav>
-
         </Navbar.Collapse>
       </Container>
     </Navbar>
