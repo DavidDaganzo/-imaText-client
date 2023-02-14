@@ -17,8 +17,8 @@ const Navigation = () => {
             'logo' /></Navbar.Brand>
         </Link>
         <Navbar.Toggle aria-controls="navbarScroll" />
-        <Navbar.Collapse id="navbarScroll">
-          <Nav className="me-auto my-2 my-lg-0">
+        <Navbar.Collapse className='justify-content-end' id="navbarScroll">
+          <Nav className="my-2 my-lg-0">
             <Link to="/">
               <Nav.Link as='div'>Home</Nav.Link>
             </Link>
@@ -31,6 +31,9 @@ const Navigation = () => {
             <Link to="https://www.linkedin.com/in/david-daganzo-fraile/">
               <Nav.Link as="div">Linkedin</Nav.Link>
             </Link>
+
+
+
           </Nav>
         </Navbar.Collapse>
       </Container>

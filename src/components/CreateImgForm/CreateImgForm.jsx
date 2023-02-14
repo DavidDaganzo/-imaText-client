@@ -2,6 +2,7 @@ import React from 'react'
 import { Form, Button, Row, Col } from "react-bootstrap"
 import { useState } from "react"
 import imageService from '../../services/image.services';
+import Loader from '../Loader/Loader';
 
 const CreateImgForm = () => {
 
@@ -10,6 +11,8 @@ const CreateImgForm = () => {
     imgSide: '',
     url: ''
   })
+
+  const [loadingImage, setLoadingImage] = useState(false)
 
   const { prompt, imgSide, url } = imgData
 
@@ -20,11 +23,13 @@ const CreateImgForm = () => {
 
   const handleFormSubmit = e => {
     e.preventDefault()
+    setLoadingImage(true)
     imageService
       .generateImage(imgData)
       .then((response) => {
         SetImgData({ ...imgData, url: response.data.data })
         console.log(response.data.data)
+        setLoadingImage(false)
       })
       .catch(err => console.log(err))
   }
@@ -44,7 +49,7 @@ const CreateImgForm = () => {
 
                   <Col >
                     <Form.Group className="mb-3" controlId="name">
-                      <h1 className='text-center'>Create new image</h1>
+                      <h1 className='text-center mt-3'>Create new image</h1>
                       <hr />
                       <h4 className='mt-4'>Write the description of the image:</h4>
                       <Form.Control type="text" value={prompt} onChange={handleInputChange} name="prompt" />
@@ -62,7 +67,7 @@ const CreateImgForm = () => {
                     </Form.Select  >
 
 
-                    <div className=" d-grid mb-2 mt-4">
+                    <div className=" d-grid mb-2 mt-4 mb-3">
                       <Button variant="dark" type="submit" >{!imgData.prompt ? 'Write the description of the image' : !imgData.imgSide ? 'Select the size of the image' : 'Generate image'}</Button>
                     </div>
                   </Col>
@@ -70,13 +75,13 @@ const CreateImgForm = () => {
               </Col>
 
               <Col md={{ span: 5, offset: 2 }}>
-
+                {loadingImage && <Loader />}
                 {url && <div>
-                  <img src={url} className="mt-4 img" alt="img" />
-                  <a href={url} className="mt-5 mb-4 btn btn-dark d-grid" download>
-                    <button>Descargar imagen</button>
+                  <img src={url} className="img" alt="img" />
+                  <a href={url} className="mt-5 mb-2 btn btn-dark d-grid" download>
+                    <button>Download your image</button>
                   </a>
-                  <div className=" d-grid mb-2 mt-4">
+                  <div className=" d-grid mt-4">
                     <a href={url} download />
                   </div>
                 </div>

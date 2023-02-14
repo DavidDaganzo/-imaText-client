@@ -23,7 +23,6 @@ a {
 .btn {
   background-color: rgb(255, 255, 255);
   border: 2px solid black;
-  color: white;
   color: black;
 }
 
@@ -33,13 +32,13 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  color: aliceblue;
+  color: white;
 
 }
 
 .bgDiv {
   background-color: #2626269b;
-  backdrop-filter: blur(20px);
+  /* backdrop-filter: blur(20px); */
   border-radius: 20px;
 }
 
@@ -47,7 +46,7 @@ body {
   width: 100%;
   text-align: center;
   display: inline-block;
-  border-radius: 8px;
+  border-radius: 20px;
 }
 
 button {
@@ -55,4 +54,8 @@ button {
   outline: none;
   background: none;
   /* cursor: pointer; */
+}
+
+.navDiv {
+  width: 50%;
 }
