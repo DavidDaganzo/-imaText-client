@@ -27,18 +27,16 @@ a {
 }
 
 body {
-  background-image: url(../public/bg.jpg);
+  color: white;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='800' preserveAspectRatio='none' viewBox='0 0 1440 800'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1006%26quot%3b)' fill='none'%3e%3crect width='1440' height='800' x='0' y='0' fill='%230e2a47'%3e%3c/rect%3e%3cpath d='M717.3485383530618 434.7148479310598L944.1129250237856 482.91510627100007 992.3131833637258 256.1507196002763 765.548796693002 207.95046126033606z' fill='rgba(255%2c 255%2c 255%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M973.6350783144288 94.62153887584005L1068.7595076410064 189.7459682024176 1163.883936967584 94.62153887584 1068.7595076410064-0.5028904507375671z' fill='rgba(255%2c 255%2c 255%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M1166.9474031005025 293.24944904871563L1068.1255978668069 122.08506148827874 896.9612103063699 220.90686672197438 995.7830155400655 392.07125428241125z' fill='rgba(255%2c 255%2c 255%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M191.954%2c599.698C271.824%2c596.359%2c315.583%2c515%2c352.999%2c444.357C387.169%2c379.842%2c415.866%2c306.358%2c381.407%2c241.997C345.404%2c174.754%2c268.177%2c140.74%2c191.954%2c143.567C120.36%2c146.222%2c61.797%2c193.509%2c25.369%2c255.199C-11.801%2c318.146%2c-26.058%2c393.062%2c5.766%2c458.873C42.074%2c533.958%2c108.624%2c603.182%2c191.954%2c599.698' fill='rgba(255%2c 255%2c 255%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M1384.2749826221357 245.36504911830764L1426.7407998030897 86.88046181405568 1268.2562124988376 44.41464463310169 1225.7903953178836 202.89923193735365z' fill='rgba(255%2c 255%2c 255%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M165.3037918099493 238.7983762237968L56.7837879079693 173.59297950237982-8.421608813447676 282.11298340435985 100.09839508853233 347.3183801257768z' fill='rgba(255%2c 255%2c 255%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M638.2400470753646 407.0202270962138L504.79225990894366 518.7796656687666 646.8457028039034 573.3088734490988z' fill='rgba(255%2c 255%2c 255%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M657.0852112350711 521.8042607027782L604.5674125963669 605.8503072535217 756.8953817418343 642.6039819362063z' fill='rgba(255%2c 255%2c 255%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M177.291%2c948.512C257.324%2c947.249%2c349.228%2c945.709%2c389.448%2c876.505C429.782%2c807.105%2c389.418%2c724.197%2c347.412%2c655.797C307.97%2c591.571%2c252.463%2c536.506%2c177.291%2c531.041C91.977%2c524.838%2c4.057%2c555.318%2c-41.847%2c627.497C-90.917%2c704.655%2c-98.349%2c807.871%2c-46.795%2c883.392C0.209%2c952.248%2c93.931%2c949.828%2c177.291%2c948.512' fill='rgba(255%2c 255%2c 255%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1006'%3e%3crect width='1440' height='800' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cstyle%3e %40keyframes float1 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-10px%2c 0)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float1 %7b animation: float1 5s infinite%3b %7d %40keyframes float2 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-5px%2c -5px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float2 %7b animation: float2 4s infinite%3b %7d %40keyframes float3 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(0%2c -10px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float3 %7b animation: float3 6s infinite%3b %7d %3c/style%3e%3c/defs%3e%3c/svg%3e");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  color: white;
-
 }
 
 .bgDiv {
   background-color: #2626269b;
-  /* backdrop-filter: blur(20px); */
   border-radius: 20px;
 }
 
@@ -58,4 +56,8 @@ button {
 
 .navDiv {
   width: 50%;
+}
+
+.infoLi {
+  font-size: 18px;
 }

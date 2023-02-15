@@ -1,13 +1,12 @@
 import './App.css';
-import CreateImgForm from './components/CreateImgForm/CreateImgForm';
 import Navigation from './components/Navigation/Navigation';
-import Home from './pages/Home';
+import AppRoutes from './routes/AppRoutes';
 
 const App = () => {
   return (
     <div className="App">
       <Navigation />
-      <Home />
+      <AppRoutes />
     </div>
   );
 }

@@ -15,7 +15,7 @@ const CreateImgForm = () => {
   const [loadingImage, setLoadingImage] = useState(false)
 
   const { prompt, imgSide, url } = imgData
-
+  imgSide
   const handleInputChange = e => {
     const { name, value } = e.target
     SetImgData({ ...imgData, [name]: value })
@@ -42,9 +42,8 @@ const CreateImgForm = () => {
           <>
 
             <Row>
-              <Col className='bgDiv' md={{ span: 5 }}>
 
-
+              {!url &&
                 <Form onSubmit={handleFormSubmit}>
 
                   <Col >
@@ -70,23 +69,62 @@ const CreateImgForm = () => {
                     <div className=" d-grid mb-2 mt-4 mb-3">
                       <Button variant="dark" type="submit" >{!imgData.prompt ? 'Write the description of the image' : !imgData.imgSide ? 'Select the size of the image' : 'Generate image'}</Button>
                     </div>
+
+                    {loadingImage && <Loader />}
                   </Col>
                 </Form>
-              </Col>
+              }
 
-              <Col md={{ span: 5, offset: 2 }}>
-                {loadingImage && <Loader />}
-                {url && <div>
+
+
+
+
+
+              {url && <>
+                <Col className='bgDiv' md={{ span: 5 }}>
+
+
+                  <Form onSubmit={handleFormSubmit}>
+
+                    <Col >
+                      <Form.Group className="mb-3" controlId="name">
+                        <h1 className='text-center mt-3'>Create new image</h1>
+                        <hr />
+                        <h4 className='mt-4'>Write the description of the image:</h4>
+                        <Form.Control type="text" value={prompt} onChange={handleInputChange} name="prompt" />
+                      </Form.Group>
+
+
+
+
+                      <h4>Select the size of the image:</h4>
+                      <Form.Select className="mb-3" aria-label="imgSide" name='imgSide' onChange={handleInputChange}>
+                        <option>Size</option>
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="big">Big</option>
+                      </Form.Select  >
+
+
+                      <div className=" d-grid mb-2 mt-4 mb-3">
+                        <Button variant="dark" type="submit" >{!imgData.prompt ? 'Write the description of the image' : !imgData.imgSide ? 'Select the size of the image' : 'Generate image'}</Button>
+                      </div>
+                    </Col>
+                  </Form>
+                </Col>
+                <Col md={{ span: 5, offset: 2 }}>
+                  {loadingImage && <Loader />}
                   <img src={url} className="img" alt="img" />
-                  <a href={url} className="mt-5 mb-2 btn btn-dark d-grid" download>
+                  <a href={url} className="mt-4 mb-1 btn btn-dark d-grid" download>
                     <button>Download your image</button>
                   </a>
-                  <div className=" d-grid mt-4">
+                  {/* <div className=" d-grid mt-4">
                     <a href={url} download />
-                  </div>
-                </div>
-                }
-              </Col>
+                  </div> */}
+                </Col>
+              </>
+              }
+
             </Row>
           </>
 
