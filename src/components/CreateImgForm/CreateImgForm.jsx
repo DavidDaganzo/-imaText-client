@@ -67,7 +67,7 @@ const CreateImgForm = () => {
 
 
                     <div className=" d-grid mb-2 mt-4 mb-3">
-                      <Button variant="dark" type="submit" >{!imgData.prompt ? 'Write the description of the image' : !imgData.imgSide ? 'Select the size of the image' : 'Generate image'}</Button>
+                      <Button variant="dark" type="submit" >{!prompt ? 'Write the description of the image' : !imgSide ? 'Select the size of the image' : 'Generate image'}</Button>
                     </div>
 
                     {loadingImage && <Loader />}
