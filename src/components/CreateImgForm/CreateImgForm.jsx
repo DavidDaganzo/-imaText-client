@@ -15,7 +15,7 @@ const CreateImgForm = () => {
   const [loadingImage, setLoadingImage] = useState(false)
 
   const { prompt, imgSide, url } = imgData
-  imgSide
+
   const handleInputChange = e => {
     const { name, value } = e.target
     SetImgData({ ...imgData, [name]: value })
