@@ -28,7 +28,6 @@ const CreateImgForm = () => {
       .generateImage(imgData)
       .then((response) => {
         SetImgData({ ...imgData, url: response.data.data })
-        console.log(response.data.data)
         setLoadingImage(false)
       })
       .catch(err => console.log(err))
